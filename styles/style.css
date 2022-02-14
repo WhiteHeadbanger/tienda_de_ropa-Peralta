@@ -1,0 +1,479 @@
+/* STYLESHEET HECHO PARA IPHONE X
+   Mirarlo en Google Chrome, ya que en otros navegadores puede verse mal (Opera i'm lookin' at ya)
+
+Dimensiones
+ - Width: 375
+ - Height: 812 */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Corrois Gothic', sans-serif;
+}
+
+
+@media screen and (min-width: 320px){
+
+    /* --------------------> INDEX.HTML <-------------------- */
+    
+    nav {
+        height: 70px;
+        display: flex;
+        position: fixed;
+        background-color: white;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        /* Si no pongo un z index, el texto de la pagina se ve a través de la navbar */
+        z-index: 99999;
+    }
+
+    nav .not-mobile {
+        display: none;
+    }
+    
+    nav .right-icons .search-outline {
+        position: absolute;
+        left: 285px; 
+    }
+    
+    ion-icon {
+        font-size: 2em;
+        color: black;
+        /* padding: 1em .5em; */
+        margin: 20px 10px;
+    }
+    
+    h3 {
+        position: relative;
+        top: -30px;
+        left: 70px;
+        font-weight: lighter;
+        font-size: 1.3rem;
+        white-space: nowrap;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .mobile .menu {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 370px;
+        height: 300px;
+    
+        list-style: none;
+        background: white;
+        display: flex;
+    
+        flex-direction: column;
+        transform: translateX(-100%);
+        transition: transform 0.2s ease;
+    }
+    
+    .close {
+        position: absolute;
+        border: none;
+        color: black;
+        cursor: pointer;
+        top: -.3rem;
+        right: 1rem;
+    }
+    
+    .menu:target {
+        transform: translateX(0);
+    }
+    
+    .logo {
+        text-decoration: none;
+        font-size: 2rem;
+        color: black;
+    }
+    
+    .models-container {
+        width: 375px;
+        height: 380px;
+        background-image: url("../images/model-carrousel.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position:center;
+    }
+    
+    .categories-container {
+        display: grid;
+        grid-template-columns: 33% auto 33%;
+        grid-template-rows: 100%;
+        grid-column-gap: 10px;
+        margin-bottom: 50px;
+    }
+    
+    .categories-container .card {
+        height: 100px;
+        width: 100px;
+        margin: 10px 10px;
+        text-align: center;
+        top: -10px;
+    }
+    
+    .categories-container .card img {
+        max-width: 100%;
+    }
+    
+    .categories-container .card span {
+        font-size: .8rem;
+    }
+    
+    .collections-container .card {
+        margin: 10px 0;
+    }
+    
+    .collections-container .card img {
+        width: 375px;
+        object-fit: cover;
+    }
+    
+    .title-visit-us {
+        top: 20px;
+        left: 130px;
+    }
+    
+    .map-container {
+        margin: 50px 0;
+    }
+    
+    .map-container img {
+        width: 375px;
+    }
+    
+    .footer-container {
+        margin-top: 100vh;
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-size: .4rem;
+    }
+    
+    .socials {
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    .socials img {
+        width: 25px;
+        margin: 20px 5px 10px;
+    }
+    
+    .footer-separator {
+        width: 70%;
+        margin: 0 0 10px 60px;
+    }
+    
+    .useful-links {
+        margin: 0 0 10px 20px;
+    }
+    
+    .useful-links a {
+        color: white;
+        font-size: .6rem;
+        margin: 0 20px;
+    }
+    
+    /* --------------------> ABOUT.HTML <-------------------- */
+    
+    .about h3 {
+        position: relative;
+        top: 100px;
+        left: 145px;
+    }
+    .about div {
+        height: 200px;
+    }
+    
+    .about .about-image {
+        width: 375px;
+        height: 380px;
+        background-image: url("../images/about.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position:center;
+        margin: 0 15px;
+    }
+
+    .about p {
+        margin: 0 15px;
+    }
+    
+    .about .p1 {
+        position: relative;
+        top: 120px;
+    }
+    
+    .about .p2 {
+        position: relative;
+        top: -40px;
+    }
+    
+    /* --------------------> FAQ.HTML <-------------------- */
+    
+    .faq h3 {
+        position: relative;
+        top: 100px;
+        left: 165px;
+    }
+    
+    .faq-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 150px;
+        left: 20px;
+    }
+    
+    .drop-down {
+        width: 335px;
+        height: 40px;
+        text-align: left;
+        margin-top: 10px;
+        border: lightgray solid 1px;
+    
+    }
+    
+    .drop-down span {
+        position: relative;
+        left: 10px;
+        top: 10px;
+        color: lightgray;
+    }
+    
+    /* --------------------> CONTACT.HTML <-------------------- */
+    
+    .contact-us h3 {
+        position: relative;
+        top: 100px;
+        left: 120px;
+    }
+    
+    .form-container {
+        position: relative;
+        top: 150px;
+        left: 10px;
+        padding-right: 20px;
+    }
+    
+    .form-container form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .form-container form input {
+        height: 40px;
+        margin-top: 10px;
+    }
+    
+    .form-container form textarea {
+        margin-top: 10px;
+    }
+    
+    .form-container .btn {
+        border: 1px solid lightgray;
+        color: black;
+        background-color: white;
+        width: 40%;
+        margin-left: 100px;
+    }
+    
+    .form-container .btn:hover {
+        background-color: black;
+        border: none;
+        color: white;
+    }
+    
+    /* --------------------> SECTION-N.HTML <-------------------- */
+    
+    .products {
+        position: relative;
+        top: 150px;
+    }
+    
+    .products h3 {
+        left: 120px; 
+    }
+    
+    /* Si bien no se evalúa el grid en esta entrega, no encontre manera más facil. Igual lo tengo que arreglar, no esta del todo bien medido 
+    
+    Dentro del grid habrían varias "cards", pero por falta de tiempo no llego a agregarlo. */
+    
+    .products-grid {
+        display: grid;
+        grid-template-columns: 30% auto 30%;
+        grid-template-rows: 100px 100px;
+        margin-top: 40px;
+    }
+    
+    .product-card img{
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+    /* --------------------> INDEX.HTML <-------------------- */
+
+    nav {
+        height: 100px;
+        display: flex;
+    }
+
+    nav .mobile {
+        display: none;
+    }
+    
+    nav .right-icons .search-outline {
+        left: 1080px;
+    }
+
+    .logo {
+        margin-left: 20px;
+    }
+
+    /* AYUDA, NO PUEDO HACER QUE EL MENU SE MUESTRE EN LA NAVBAR.  */
+
+    .close {
+        display: none;
+    }
+
+    .models-container {
+        width: 100%;
+        background-size: cover;
+        height: 700px;
+    }
+
+    .carrousel {
+        text-align: center;
+    }
+
+    .carrousel h3 {
+        font-size: 2rem;
+        top: 50px;
+        margin-bottom: 70px;
+        left: 0;
+    }
+
+    .categories-container {
+        /* Esto en realidad sería un carrousel con muchas mas cards */
+        display: grid;
+        grid-template-columns: 33% auto 33%;
+        grid-template-rows: 100%;
+        justify-items: center;
+    }
+
+    .categories-container .card {
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+    }
+
+    .categories-container .card span {
+        font-size: 1.2rem;
+    }
+
+    .collections-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        /* grid-row-gap: 200px; */
+        grid-column-gap: 20px;
+        grid-template-areas: 
+            "collection-1 collection-2"
+            "collection-3 collection-3"
+    }
+
+    #collection-1 {
+        grid-area: collection-1;
+    }
+
+    #collection-2 {
+        grid-area: collection-2;
+    }
+
+    #collection-3 {
+        grid-area: collection-3;
+        margin-top: 6.5em;
+    }
+
+    .collections-container .card {
+        margin: 0;
+    }
+
+    .collections-container .card img {
+        width: 100%;
+    }
+
+    .map {
+        text-align: center;
+        margin-bottom: -800px;
+    }
+
+    .map h3 {
+        font-size: 2rem;
+        margin-bottom: 70px;
+        left: 0;
+    }
+
+    .map .map-container img {
+        width: 60%;
+    }
+
+    .footer-container {
+        font-size: .7rem;
+        height: 200px;
+    }
+
+    .footer-container .socials img{
+        width: 40px;
+        margin: 20px 20px;
+    }
+
+    .footer-container .footer-separator {
+        margin-left: 170px;
+    }
+
+    .useful-links {
+        margin: 20px 20px;
+    }
+
+    .useful-links a {
+        font-size: .9rem;
+    }
+
+    /* --------------------> ABOUT.HTML <-------------------- */
+    
+    .about {
+        text-align: center;
+    }
+
+    .about h3 {
+        font-size: 2rem;
+        left: 0;
+    }
+
+    .about .about-image {
+        width: 100%;
+        background-size: cover;
+        height: 600px;        
+    }
+
+    .about .p2 {
+        margin-top: 70px;
+    }
+
+}
