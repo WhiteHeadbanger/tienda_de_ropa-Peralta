@@ -28,6 +28,7 @@ Dimensiones
         width: 100%;
         align-items: center;
         justify-content: space-between;
+        top: 0;
         /* Si no pongo un z index, el texto de la pagina se ve a través de la navbar */
         z-index: 99999;
     }
@@ -35,16 +36,14 @@ Dimensiones
     nav .not-mobile {
         display: none;
     }
-    
-    nav .right-icons .search-outline {
-        position: absolute;
-        left: 285px; 
+
+    nav .right-icons {
+        align-self: flex-end;
     }
     
     ion-icon {
-        font-size: 2em;
+        font-size: 1.6em;
         color: black;
-        /* padding: 1em .5em; */
         margin: 20px 10px;
     }
     
@@ -69,7 +68,7 @@ Dimensiones
         left: 0;
         right: 0;
         bottom: 0;
-        width: 370px;
+        width: 320px;
         height: 300px;
     
         list-style: none;
@@ -80,7 +79,20 @@ Dimensiones
         transform: translateX(-100%);
         transition: transform 0.2s ease;
     }
+
+
+    .mobile .menu .links {
+        margin-top: 1em;
+    }
+
+    .mobile .menu .links {
+        row-gap: 1em;
+    }
     
+    .menu:target {
+        transform: translateX(0);
+    }
+
     .close {
         position: absolute;
         border: none;
@@ -90,14 +102,11 @@ Dimensiones
         right: 1rem;
     }
     
-    .menu:target {
-        transform: translateX(0);
-    }
-    
     .logo {
         text-decoration: none;
         font-size: 2rem;
         color: black;
+        margin-left: 1em;
     }
     
     .models-container {
@@ -115,6 +124,7 @@ Dimensiones
         grid-template-rows: 100%;
         grid-column-gap: 10px;
         margin-bottom: 50px;
+        width: 100%;
     }
     
     .categories-container .card {
@@ -309,10 +319,6 @@ Dimensiones
         left: 120px; 
     }
     
-    /* Si bien no se evalúa el grid en esta entrega, no encontre manera más facil. Igual lo tengo que arreglar, no esta del todo bien medido 
-    
-    Dentro del grid habrían varias "cards", pero por falta de tiempo no llego a agregarlo. */
-    
     .products-grid {
         display: grid;
         grid-template-columns: 30% auto 30%;
@@ -334,16 +340,19 @@ Dimensiones
         display: flex;
     }
 
+    ion-icon {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
     nav .mobile {
         display: none;
     }
-    
-    nav .right-icons .search-outline {
-        left: 1080px;
-    }
+
 
     .logo {
-        margin-left: 20px;
+        align-self: flex-start;
+        margin-top: 30px;
     }
 
     /* AYUDA, NO PUEDO HACER QUE EL MENU SE MUESTRE EN LA NAVBAR.  */

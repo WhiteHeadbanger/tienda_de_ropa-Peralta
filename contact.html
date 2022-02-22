@@ -10,20 +10,32 @@
 <body>
     <header>
         <nav>
-            <a href="#menu" class="hamburguer"><ion-icon name="menu-outline" class="menu-outline"></ion-icon></a>
-            <ul class="menu" id="menu">
-                <li><a href="section-n.html">Collection 1</a></li>
-                <li><a href="section-n.html">Collection 2</a></li>
-                <li><a href="section-n.html">Collection 3</a></li>
-                <a href="#" class="close"><ion-icon name="close-outline"></ion-icon></a>
-            </ul>
+            <div class="mobile">
+                <a href="#menu" class="hamburger"><ion-icon name="menu-outline" class="menu-outline"></ion-icon></a>
+                <ul class="menu" id="menu">
+                    <div class="links">
+                        <li><a href="section-n.html">Dark Elegant</a></li>
+                        <li><a href="section-n.html">Death Eater</a></li>
+                        <li><a href="section-n.html">Make Up</a></li>
+                    </div>
+                    <a href="#" class="close"><ion-icon name="close-outline"></ion-icon></a>
+                </ul>
+            </div>
             
             <a class="logo" href="/">Code Noir</a>
+
+            <div class="not-mobile">
+                <ul class="menu">
+                    <li><a href="section-n.html">Dark Elegant</a></li>
+                    <li><a href="section-n.html">Death Eater</a></li>
+                    <li><a href="section-n.html">Make Up</a></li>
+                </ul>
+            </div>
             
             <div class="right-icons">
                 <a href=""><ion-icon name="search-outline" class="search-outline"></ion-icon></a>
                 <!-- <li><input type="text" name="search-field" id="search-field"></li> -->
-                <a href=""><ion-icon name="cart-outline"></ion-icon></a>
+                <a href=""><ion-icon name="cart-outline" class="cart-outline"></ion-icon></a>
             </div>
         </nav>
     </header>
